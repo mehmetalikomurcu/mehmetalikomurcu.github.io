@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { ChevronDown, Github, Linkedin, Mail } from 'lucide-react'
 import Image from 'next/image'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 
 export function HeroSection() {
   const scrollToAbout = () => {
@@ -14,14 +14,14 @@ export function HeroSection() {
   }
 
   // Shorter, more impactful rotating texts
-  const rotatingTexts = [
+  const rotatingTexts = useMemo(() => [
     "Mehmet Ali Kömürcü",
     "Full Stack Developer",
     "Computer Engineer",
     "ASP.NET Expert",
     "Angular Developer",
     "Code Architect"
-  ]
+  ], [])
 
   const [currentTextIndex, setCurrentTextIndex] = useState(0)
   const [displayedText, setDisplayedText] = useState('')
