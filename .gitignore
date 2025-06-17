@@ -49,6 +49,6 @@ logs
 *.log
 
 # Package managers
-package-lock.json
+# package-lock.json should be committed for GitHub Actions
 yarn.lock
 pnpm-lock.yaml 
